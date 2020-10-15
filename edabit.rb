@@ -20,7 +20,7 @@
 
 def letters_only(s)
     if s == ""
-        return "false"
+        return false
     end
 
     valid = " abcdefghijklmnopqrstuvwxyz"
@@ -29,7 +29,7 @@ def letters_only(s)
             return false
         end
     end
-    puts "true"
+    return true
 end
 
-letters_only("i have numbers(1-10)")
+puts letters_only("i have numbers(1-10)")
