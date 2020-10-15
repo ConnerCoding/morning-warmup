@@ -1,3 +1,4 @@
+# https://edabit.com/challenge/eyN63yKS3E8GqnzKc
 # Letters Only
 
 # Check if the given string consists of only letters and spaces and if every letter is in lower case.
