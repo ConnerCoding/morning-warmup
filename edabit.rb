@@ -79,4 +79,38 @@ end
 ############
 ### TEST ###
 ############
-p make_sandwich(["cheese", "bacon", "cheese", "eggs"], "cheese")
+# p make_sandwich(["cheese", "bacon", "cheese", "eggs"], "cheese")
+
+################################################
+################## PROBLEM 3 ###################
+# https://edabit.com/challenge/6Mb3RS7XRJz4hbM63
+# Find Unique Positive Numbers from Array
+
+##############
+### PROMPT ###
+##############
+# Write a function that takes an array and returns a new array with unique positive (more than 0) numbers.
+
+# Examples
+# unique_arr([-5, 1, -7, -5, -2, 3, 3, -5, -1, -1]) ➞ [1, 3]
+
+# unique_arr([3, -3, -3, 5, 5, -6, -2, -4, -1, 3]) ➞ [3, 5]
+
+# unique_arr([10, 6, -12, 13, 5, 5, 13, 6, 5]) ➞ [10, 6, 13, 5]
+# Notes
+# Return the elements in the order that they are found in the array.
+# Your function should also work for empty arrays.
+
+############
+### CODE ###
+############
+def unique_arr(arr)
+    uniq = []
+    arr.each { |num| uniq << num if (num > 0 and !uniq.include?(num)) }
+    uniq
+end
+
+############
+### TEST ###
+############
+p unique_arr([10, 6, -12, 13, 5, 5, 13, 6, 5])
