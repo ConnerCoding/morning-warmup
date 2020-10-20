@@ -113,4 +113,35 @@ end
 ############
 ### TEST ###
 ############
-p unique_arr([10, 6, -12, 13, 5, 5, 13, 6, 5])
+# p unique_arr([10, 6, -12, 13, 5, 5, 13, 6, 5])
+
+################################################
+################## PROBLEM 4 ###################
+# https://edabit.com/challenge/CuagSKwGEYcAyeAsu
+# Retrieve the Subreddit
+
+##############
+### PROMPT ###
+##############
+# Create a function to extract the name of the subreddit from its URL.
+
+# Examples
+# sub_reddit("https://www.reddit.com/r/funny/") ➞ "funny"
+
+# sub_reddit("https://www.reddit.com/r/relationships/") ➞ "relationships"
+
+# sub_reddit("https://www.reddit.com/r/mildlyinteresting/") ➞ "mildlyinteresting"
+# Notes
+# N/A
+
+############
+### CODE ###
+############
+def sub_reddit(link)
+	link.split("/").last
+end
+
+############
+### TEST ###
+############
+p sub_reddit("https://www.reddit.com/r/funny/")
