@@ -188,8 +188,39 @@ end
 ############
 ### TEST ###
 ############
-p ink_levels({
-    "cyan": 432,
-    "magenta": 543,
-    "yellow": 777
-})
+# p ink_levels({
+#     "cyan": 432,
+#     "magenta": 543,
+#     "yellow": 777
+# })
+
+################################################
+################## PROBLEM 6 ###################
+# https://edabit.com/challenge/HHatH5iaZJGhKmKby
+# Number to Reversed Array
+
+##############
+### PROMPT ###
+##############
+# Create a function that takes a number and returns an array with the digits of the number in reverse order.
+
+# Examples
+# reverse_arr(1485979) ➞ [9, 7, 9, 5, 8, 4, 1]
+
+# reverse_arr(623478) ➞ [8, 7, 4, 3, 2, 6]
+
+# reverse_arr(12345) ➞ [5, 4, 3, 2, 1]
+# Notes
+# N/A
+
+############
+### CODE ###
+############
+def reverse_arr(num)
+    num.to_s.reverse.split("").map(&:to_i)
+end
+
+############
+### TEST ###
+############
+p reverse_arr(623478)
