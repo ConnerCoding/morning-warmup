@@ -223,4 +223,35 @@ end
 ############
 ### TEST ###
 ############
-p reverse_arr(623478)
+# p reverse_arr(623478)
+
+################################################
+################## PROBLEM 7 ###################
+# https://edabit.com/challenge/anbddpQfnXKLjqH9K
+# Return Odd > Even
+
+##############
+### PROMPT ###
+##############
+# Given an array, return true if there are more odd numbers than even numbers, otherwise return false.
+
+# Examples
+# odd_even([1, 2, 3, 4, 5, 6, 7, 8, 9]) ➞ true
+
+# odd_even([1]) ➞ true
+
+# odd_even([13452394823795273847528572346]) ➞ false
+# Notes
+# All arrays will have at least 1 item.
+
+############
+### CODE ###
+############
+def odd_even(a)
+    a.count(&:odd?) > a.length / 2 
+end
+
+############
+### TEST ###
+############
+p odd_even([1, 2, 3, 4, 5, 6, 7, 8, 9])
