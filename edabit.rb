@@ -254,4 +254,36 @@ end
 ############
 ### TEST ###
 ############
-p odd_even([1, 2, 3, 4, 5, 6, 7, 8, 9])
+# p odd_even([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+################################################
+################## PROBLEM 8 ###################
+# https://edabit.com/challenge/KxMhvMGgeXK3aMCGn
+# Check for Anagrams
+
+##############
+### PROMPT ###
+##############
+# Create a function that takes two strings and returns either true or false depending on whether they're anagrams or not.
+
+# Examples
+# is_anagram("cristian", "Cristina") ➞ true
+
+# is_anagram("Dave Barry", "Ray Adverb") ➞ true
+
+# is_anagram("Nope", "Note") ➞ false
+# Notes
+# Should be case insensitive.
+# The two given strings can be of different lengths.
+
+############
+### CODE ###
+############
+def is_anagram(s1, s2)
+	s1.downcase.chars.sort == s2.downcase.chars.sort
+end
+
+############
+### TEST ###
+############
+p is_anagram("Dave Barry", "Ray Adverb")
