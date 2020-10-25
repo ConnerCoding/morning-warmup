@@ -286,4 +286,38 @@ end
 ############
 ### TEST ###
 ############
-p is_anagram("Dave Barry", "Ray Adverb")
+# p is_anagram("Dave Barry", "Ray Adverb")
+
+################################################
+################## PROBLEM 9 ###################
+# https://edabit.com/challenge/cCrQq5LkByWyoNPmW
+# Stand in Line
+
+##############
+### PROMPT ###
+##############
+# Write a function that takes an array and a number as arguments. Add the number to the end of the array, then remove the first element of the array. The function should then return the updated array.
+
+# Examples
+# next_in_line([5, 6, 7, 8, 9], 1) ➞ [6, 7, 8, 9, 1]
+
+# next_in_line([7, 6, 3, 23, 17], 10) ➞ [6, 3, 23, 17, 10]
+
+# next_in_line([1, 10, 20, 42 ], 6) ➞ [10, 20, 42, 6]
+
+# next_in_line([], 6) ➞ "No array has been selected"
+# Notes
+# For an empty array input, return: "No array has been selected"
+
+############
+### CODE ###
+############
+def next_in_line(arr, num)
+    return "No array has been selected" if arr == []
+    arr.drop(1).push(num)
+end
+
+############
+### TEST ###
+############
+p next_in_line([1, 10, 20, 42 ], 6)
