@@ -320,4 +320,39 @@ end
 ############
 ### TEST ###
 ############
-p next_in_line([1, 10, 20, 42 ], 6)
+# p next_in_line([1, 10, 20, 42 ], 6)
+
+################################################
+################## PROBLEM 10 ##################
+# https://edabit.com/challenge/jhyWgRvXsXbdzZgRf
+# Percentage Changed
+
+##############
+### PROMPT ###
+##############
+# Create a function that takes an old price old, a new price new, and returns what percent the price decreased or increased. Round the percentage to the nearest whole percent.
+
+# Examples
+# percentage_changed("$800", "$600") ➞ "25% decrease"
+
+# percentage_changed("$1000", "$840") ➞ "16% decrease"
+
+# percentage_changed("$100", "$950") ➞ "850% increase"
+# Notes
+# N/A
+
+############
+### CODE ###
+############
+def percentage_changed(old, new)
+    old = old.tr('$', '').to_f
+    new = new.tr('$', '').to_f
+    percent = ((1 - (new / old)) * 100).round()
+    return "#{percent * -1}% increase" if new > old
+    "#{percent}% decrease"
+end
+
+############
+### TEST ###
+############
+p percentage_changed("$1000", "$840")
