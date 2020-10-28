@@ -388,4 +388,40 @@ end
 ############
 ### TEST ###
 ############
-p get_discounts([10, 20, 40, 80], "75%")
+# p get_discounts([10, 20, 40, 80], "75%")
+
+################################################
+################## PROBLEM 12 ##################
+# https://edabit.com/challenge/3wC6v3phsWxfGZK4m
+# Concatenate to Form Target Array
+
+##############
+### PROMPT ###
+##############
+# Create a function that returns true if smaller arrays can concatenate to form the target array and false otherwise.
+
+# Examples
+# can_concatenate([[1, 2, 3, 4], [5, 6], [7]], [1, 2, 3, 4, 5, 6, 7]) ➞ true
+
+# can_concatenate([[2, 1, 3], [5, 4, 7, 6]], [7, 6, 5, 4, 3, 2, 1]) ➞ true
+
+# can_concatenate([[2, 1, 3], [5, 4, 7, 6, 7]], [1, 2, 3, 4, 5, 6, 7]) ➞ false
+# # Duplicate 7s not found in target array.
+
+# can_concatenate([[2, 1, 3], [5, 4, 7]], [1, 2, 3, 4, 5, 6, 7]) ➞ false
+# # Missing 6 from target array.
+# Notes
+# Arrays do not have to be sorted (see example #2).
+# Arrays should concatenate to create the final array exactly (see examples #3 and #4).
+
+############
+### CODE ###
+############
+def can_concatenate(arr, target)
+	arr.flatten.sort == target.sort
+end
+
+############
+### TEST ###
+############
+p can_concatenate([[2, 1, 3], [5, 4, 7, 6]], [7, 6, 5, 4, 3, 2, 1])
