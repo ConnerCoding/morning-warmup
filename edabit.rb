@@ -424,4 +424,41 @@ end
 ############
 ### TEST ###
 ############
-p can_concatenate([[2, 1, 3], [5, 4, 7, 6]], [7, 6, 5, 4, 3, 2, 1])
+# p can_concatenate([[2, 1, 3], [5, 4, 7, 6]], [7, 6, 5, 4, 3, 2, 1])
+
+################################################
+################## PROBLEM 13 ##################
+# https://edabit.com/challenge/do6oxx2HY9TYEiN6A
+# Matchstick Houses
+
+##############
+### PROMPT ###
+##############
+# This challenge will help you interpret mathematical relationships both algebraically and geometrically.
+
+# Matchstick Houses, Steps 1, 2 and 3
+
+# Create a function that takes a number (step) as an argument and returns the number of matchsticks in that step. See step 1, 2 and 3 in the image above.
+
+# Examples
+# match_houses(1) ➞ 6
+
+# match_houses(4) ➞ 21
+
+# match_houses(87) ➞ 436
+# Notes
+# Step 0 returns 0 matchsticks.
+# The input (step) will always be a non-negative integer.
+# Think of the input (step) as the total number of houses that have been connected together.
+
+############
+### CODE ###
+############
+def match_houses(step)
+    step == 0 ? 0 : step * 5 + 1
+end
+
+############
+### TEST ###
+############
+p match_houses(87)
