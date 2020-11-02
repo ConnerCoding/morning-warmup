@@ -461,4 +461,39 @@ end
 ############
 ### TEST ###
 ############
-p match_houses(87)
+# p match_houses(87)
+
+################################################
+################## PROBLEM 14 ##################
+# https://edabit.com/challenge/HwKXMkA3TRxbJBGpA
+# Same ASCII?
+
+##############
+### PROMPT ###
+##############
+# Return true if the sum of ASCII values of the first string is same as the sum of ASCII values of the second string, otherwise return false.
+
+# Examples
+# same_ascii("a", "a") ➞ true
+
+# same_ascii("AA", "B@") ➞ true
+
+# same_ascii("EdAbIt", "EDABIT") ➞ false
+# Notes
+# If you need some help with ASCII codes, check the Resources tab for an image of all ASCII codes used in this challenge.
+
+############
+### CODE ###
+############
+def same_ascii(string1, string2)
+    val1, val2 = 0, 0
+    string1.each_byte { |c| val1 += c } 
+    string2.each_byte { |c| val2 += c }
+    val1 == val2
+    # string1.each_byte.reduce(:+) == string2.each_byte.reduce(:+)
+end
+
+############
+### TEST ###
+############
+p same_ascii("AA", "B@")
