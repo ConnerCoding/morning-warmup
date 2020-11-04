@@ -530,4 +530,40 @@ end
 ############
 ### TEST ###
 ############
-p return_only_integer(["String",  true,  3.3,  1])
+# p return_only_integer(["String",  true,  3.3,  1])
+
+################################################
+################## PROBLEM 16 ##################
+# https://edabit.com/challenge/WdmpoQtDRNAhgMMxa
+# Number of Arrays in an Array
+
+##############
+### PROMPT ###
+##############
+# Return the total number of arrays inside a given array.
+
+# Examples
+# num_of_subarrays([[1, 2, 3]]) ➞ 1
+
+# num_of_subarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3]]) ➞ 3
+
+# num_of_subarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]) ➞ 4
+
+# num_of_subarrays([1, 2, 3]) ➞ 0
+# Notes
+# N/A
+
+############
+### CODE ###
+############
+def num_of_subarrays(arr)
+    count = 0
+    arr.each { |item| count += 1 if item.kind_of?(Array) }
+    count
+    # arr.grep(Array).count
+end
+
+############
+### TEST ###
+############
+p num_of_subarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
