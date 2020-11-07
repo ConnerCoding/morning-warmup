@@ -570,36 +570,45 @@ end
 
 ################################################
 ################## PROBLEM 17 ##################
-# https://edabit.com/challenge/WdmpoQtDRNAhgMMxa
-# Number of Arrays in an Array
+# https://edabit.com/challenge/5p9H8zCeXaaoMpZ5j
+# Who's The Oldest?
 
 ##############
 ### PROMPT ###
 ##############
-# Return the total number of arrays inside a given array.
+# Given a hash containing the names and ages of a group of people, return the name of the oldest person.
 
 # Examples
-# num_of_subarrays([[1, 2, 3]]) ➞ 1
+# oldest({
+#   "Emma" => 71,
+#   "Jack" => 45,
+#   "Amy" => 15,
+#   "Ben" => 29
+# }) ➞ "Emma"
 
-# num_of_subarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3]]) ➞ 3
-
-# num_of_subarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]) ➞ 4
-
-# num_of_subarrays([1, 2, 3]) ➞ 0
+# oldest({
+#   "Max" => 9,
+#   "Josh" => 13,
+#   "Sam" => 48,
+#   "Anne" => 33
+# }) ➞ "Sam"
 # Notes
-# N/A
+# All ages will be different.
 
 ############
 ### CODE ###
 ############
-def num_of_subarrays(arr)
-    count = 0
-    arr.each { |item| count += 1 if item.kind_of?(Array) }
-    count
-    # arr.grep(Array).count
+def oldest(people)
+    people.key(people.values.max)
+    # people.max_by { |k, v| v }[0]
 end
 
 ############
 ### TEST ###
 ############
-p num_of_subarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
+p oldest({
+    "Max" => 9,
+    "Josh" => 13,
+    "Sam" => 48,
+    "Anne" => 33
+})
