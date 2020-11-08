@@ -606,9 +606,61 @@ end
 ############
 ### TEST ###
 ############
-p oldest({
-    "Max" => 9,
-    "Josh" => 13,
-    "Sam" => 48,
-    "Anne" => 33
-})
+# p oldest({
+#     "Max" => 9,
+#     "Josh" => 13,
+#     "Sam" => 48,
+#     "Anne" => 33
+# })
+
+################################################
+################## PROBLEM 18 ##################
+# https://edabit.com/challenge/ZHJZLw65REixbwrtG
+# Basic Calculator
+
+##############
+### PROMPT ###
+##############
+# Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
+
+# Examples
+# calculator(2, "+", 2) ➞ 4
+
+# calculator(2, "*", 2) ➞ 4
+
+# calculator(4, "/", 2) ➞ 2
+# Notes
+# If the input tries to divide by 0, return: "Can't divide by 0!"
+
+############
+### CODE ###
+############
+def calculator(num1, operator, num2)
+    # case operator
+    # when "+"
+    #     return num1 + num2
+    # when "-"
+    #     return num1 - num2
+    # when "*"
+    #     return num1 * num2
+    # when "/"
+    #     return "Can't divide by 0!" if num2 == 0
+    #     return num1 / num2
+    # else
+    #     return "Invalid operator"
+    # end
+
+    return "Can't divide by 0!" if num2 == 0
+    case operator
+    when "+" then num1 + num2
+    when "-" then num1 - num2
+    when "*" then num1 * num2
+    when "/" then num1 / num2
+    else "Invalid operator"
+    end
+end
+
+############
+### TEST ###
+############
+p calculator(4, "/", 2)
