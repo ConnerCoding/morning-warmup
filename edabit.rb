@@ -698,4 +698,68 @@ end
 ############
 ### TEST ###
 ############
-p concat([1], [2], [3], [4], [5], [6], [7])
+# p concat([1], [2], [3], [4], [5], [6], [7])
+
+dial_book = {
+    "newyork" => "212",
+    "newbrunswick" => "732",
+    "edison" => "908",
+    "plainsboro" => "609",
+    "sanfrancisco" => "301",
+    "miami" => "305",
+    "paloalto" => "650",
+    "evanston" => "847",
+    "orlando" => "407",
+    "lancaster" => "717"
+}
+   
+# Get city names from the hash
+def get_city_names(somehash)
+somehash.each { |k, _| puts k.capitalize }
+end
+
+# Get area code based on given hash and key
+def get_area_code(somehash, key)
+puts "The area code for #{key} is #{somehash[key].to_i}"
+end
+
+# Execution flow
+# loop do
+# puts "Do you want to look up a city?"
+# answer = gets.chomp
+# answer == "yes" ? get_city_names(dial_book) : break
+# puts "Which city?"
+# city = gets.chomp
+# get_area_code(dial_book, city)
+# end
+
+# p get_city_names(dial_book)
+# p get_area_code(dial_book, "newyork")
+
+class Student
+    attr_accessor :first_name, :last_name, :email, :username
+
+    def initialize(firstname, lastname, username, email, password)
+        @first_name = firstname
+        @last_name = lastname
+        @username = username
+        @email = email
+        @password = password
+    end
+
+    def to_s
+        "First name: #{@first_name}, Last name: #{@last_name}, Username: #{@username},
+                    email address: #{@email}, Password: #{@password}"
+    end
+
+end
+
+mashrur = Student.new("Mashrur", "Hossain", "mashrur1", "mashrur@example.com",
+                    "password1")
+john = Student.new("John", "Doe", "john1", "john1@example.com",
+                    "password2")
+puts mashrur
+puts john
+mashrur.last_name = john.last_name
+puts "Mashrur is altered"
+puts mashrur
